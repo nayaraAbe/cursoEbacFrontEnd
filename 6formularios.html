@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <p>São elementos que permitem o usuário de mandar dados ao servidor web, isso facilita a coleta de dados, como em cadastros, pesquisas, feedback e compras online.</p>
+    <h2>"form"</h2>
+    <p>É a tag principal para se criar formulários, ela encapsula todos os outros elementos.</p>
+    <h2>"input"</h2>
+    <p>Campo utilizado para entrada de dados, podendo ser qualquer informação vinda do usuário, como senha, pesquisa, e-mail entre outros.</p>
+    <form>
+        <input type="text" placeholder="Seu nome"/><!--"type="text"" indica o tipo de campo do input-->
+    </form>
+    <p>Dentro da tag "input" pode-se utilizar <b>"placeholder"</b> que nomeia com o que o campo de texto deve ser preenchido.</p>
+    <p><b>"label"</b> indica fora da caixa de texto o que o usuário deve preencher, também possui o comportamento de indicar qual campo deverá ser preenchido com o click do mouse</p>
+    <form>
+        <label for="email">Seu E-mail</label><!--"for" atributo utilizado dentro do campo "label" para nomear um "id", dando enfaze em que campo deve ser preenchido-->
+        <input id="email" type="email"/><!--"type="email"" indica que o campo só poderá ser prenchido com um email-->
+    </form>
+    <hr>
+    <h2>type=""</h2>
+    <p>Utilizando o tipo de texto para celular/telefone <b>"type="tel""</b> o tetxo se torna responsivo, 
+    o que facilita para usuários de outros tipos de aparelhos como o celular e tablet, tendo somente o teclado numerico</p>
+    <form>
+        <input type="tel" placeholder="Seu telefone">
+    </form>
+    <hr>
+    <p><b>"type="number""</b> é usando para definir uma caixa numerica podendo ter os atributos de <b>"max"</b> para definir o número maximo que se possa colocar e também 
+    <b>"min"</b> para o número minimo. Pode-se indicar o salto entre um número e outro com <b>"step"</b>.</p>
+    <form>
+        <label for="numero">Número</label>
+        <input id="numero" type="number" max="10" min="0" step="2"/>
+    </form>
+    <hr>
+    <p><b>"type="file""</b> cria uma caixa para de mandar arquivo</p>
+    <form>
+        <input type="file">
+    </form>
+    <hr>
+    <p><b>"type="color""</b>cria uma caixa de celeção de cores</p>
+    <form>
+        <input type="color"/>
+    </form>
+    <hr>
+    <p><b>"type="checkbox""</b> usado como caixa de marcação</p>
+    <form>
+        <input id="checkbox-termos" type="checkbox"/>
+        <label for="checkbox-termos">Aceito os termos</label>
+    </form>
+    <hr>
+    <h2>Campo de alternativa</h2>
+    <p>Utiliza o <b>"type="radio""</b> para criar opções/alternativas de respostas para o usuario</p>
+    <br>
+    <p>Qual é sua cor favorita?</p>
+    <form>
+        <input type="radio" id="cor-Vermelha" name="cor-favorita"/><label for="cor-Vermelha">Vermelho</label>
+        <input type="radio" id="cor-Amarelo" name="cor-favorita"/><label for="cor-Amarelo">Amarelo</label><!--"name" é utilizado para agrupar as alternativas dadas-->
+        <input type="radio" id="cor-Azul" name="cor-favorita"/><label for="cor-Azul">Azul</label>
+    </form>
+    <hr>
+    <h2>Caixa de opções(combo box)</h2>
+    <p>Utiliza as tags <b>"select"</b> e <b>"option</b> para estar criando a caixa de opções</p>
+    <br>
+    <label>Qual é seu filme favorito?</label>
+    <select multiple><!--"multiple" é usado para de selecionar mais de uma opção da caixa-->
+        <option>Filme A</option>
+        <option>Filme B</option>
+        <option>Filme C</option>
+    </select>
+    <hr>
+    <h2>"textarea"</h2>
+    <p>Se ultiliza a tag <b>"textarea"</b> para criar um campo de texto maior, normalmente utilizado para o usuario deixar feedbacks e comentários</p>
+    <textarea></textarea>
+    <hr>
+    <h2>"button"</h2>
+    <p> a tag <b>"button"</b> é utilizada para criar botões, podendo ser usado com atributo</p>
+    <button type="submit">
+        Enviar
+    </button>
+    <button type="reset">
+        Limpar
+    </button>
+    <hr>
+    <h2>"type="password""</h2>
+    <p>Esse tipo de atributo também é responsivo, pois garante a seguraça de senhas do usuário</p>
+    <form>
+        <label for="nome">Seu nome: </label><input id="nome" type="user"/>
+        <br>
+        <label for="senha">Sua senha: </label><input id="senha" type="password"/>
+        <br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+    <br>
+    <a href="./1titulo.html">Ir para <b>Inicio</b></a>
+</body>
+</html>
